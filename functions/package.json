@@ -8,7 +8,9 @@
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "seed": "npm run build && FIRESTORE_EMULATOR_HOST=localhost:5003 node lib/scripts/seedDatabase.js",
+    "seed:prod": "npm run build && node lib/scripts/seedDatabase.js"
   },
   "main": "lib/index.js",
   "dependencies": {
