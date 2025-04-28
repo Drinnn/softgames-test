@@ -41,7 +41,7 @@ describe('GetGameByIdService', () => {
 
   describe('execute', () => {
     it('should return a game when found', async () => {
-      const input: GetGameByIdServiceInput = { id: 123 };
+      const input: GetGameByIdServiceInput = { gameId: 123 };
       
       const result = await service.execute(input);
 
@@ -58,7 +58,7 @@ describe('GetGameByIdService', () => {
     it('should return ServiceError when game is not found', async () => {
       mockFindById.mockResolvedValue(null);
       
-      const input: GetGameByIdServiceInput = { id: 999 };
+      const input: GetGameByIdServiceInput = { gameId: 999 };
       
       const result = await service.execute(input);
 
@@ -73,7 +73,7 @@ describe('GetGameByIdService', () => {
     it('should return ServiceError when repository throws an error', async () => {
       mockFindById.mockRejectedValue(new Error('Database error'));
       
-      const input: GetGameByIdServiceInput = { id: 123 };
+      const input: GetGameByIdServiceInput = { gameId: 123 };
       
       const result = await service.execute(input);
 

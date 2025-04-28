@@ -2,7 +2,7 @@ import { Game, ServiceError } from "../entities";
 import { GameRepository } from "./interfaces";
 
 export type GetGameByIdServiceInput = {
-    id: number;
+    gameId: number;
 }
 
 export type GetGameByIdServiceOutput = Game | ServiceError;
@@ -12,7 +12,7 @@ export class GetGameByIdService {
 
     async execute(input: GetGameByIdServiceInput): Promise<GetGameByIdServiceOutput> {
         try {
-            const game = await this.gameRepository.findById(input.id);
+            const game = await this.gameRepository.findById(input.gameId);
             if (!game) {
                 return new ServiceError('Game not found');
             }

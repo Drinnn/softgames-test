@@ -1,6 +1,6 @@
-import { getFirestore } from './getFirestore.js';
-import { memoize } from '../../utils/memoize.js';
-import { HttpError } from '../../classes/HttpError.js';
+import { getFirestore } from './getFirestore';
+import { memoize } from '../../utils/memoize';
+import { HttpError } from '../../entities';
 
 const getCollection = memoize(() =>
   getFirestore().collection('games'),

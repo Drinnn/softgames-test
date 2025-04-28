@@ -1,7 +1,7 @@
 import express, { type Express, type NextFunction, type Response, type Request } from 'express';
 import morgan from 'morgan';
-import router from './routes/index.js';
-import { HttpError } from './classes/HttpError.js';
+import router from './routes/index';
+import { HttpError } from './entities';
 
 export const app: Express = express();
 

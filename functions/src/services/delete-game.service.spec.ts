@@ -27,7 +27,7 @@ describe('DeleteGameService', () => {
   let mockGame: Game;
   
   const validInput: DeleteGameServiceInput = {
-    id: 123
+    gameId: 123
   };
 
   beforeEach(() => {

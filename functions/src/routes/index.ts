@@ -1,5 +1,5 @@
-import { createRouter } from '../utils/router.js';
-import { v1Router } from './v1/index.js';
+import { createRouter } from '../utils/router';
+import { v1Router } from './v1/index';
 
 const router = createRouter();
 

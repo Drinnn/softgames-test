@@ -1,5 +1,5 @@
-import { createRouter } from '../../utils/router.js';
-import { gamesRouter } from './games/index.js';
+import { createRouter } from '../../utils/router';
+import { gamesRouter } from './games/index';
 
 export const v1Router = createRouter();
 
