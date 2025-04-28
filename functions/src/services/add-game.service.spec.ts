@@ -6,6 +6,7 @@ describe('AddGameService', () => {
   let mockSave: jest.Mock;
   let mockFindById: jest.Mock;
   let mockDelete: jest.Mock;
+  let mockFindAll: jest.Mock;
   let mockRepository: GameRepository;
   let service: AddGameService;
   
@@ -26,11 +27,13 @@ describe('AddGameService', () => {
     mockSave = jest.fn();
     mockFindById = jest.fn();
     mockDelete = jest.fn();
+    mockFindAll = jest.fn();
     
     mockRepository = {
       save: mockSave,
       findById: mockFindById,
-      delete: mockDelete
+      delete: mockDelete,
+      findAll: mockFindAll
     };
     
     service = new AddGameService(mockRepository);

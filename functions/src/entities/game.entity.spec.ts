@@ -129,4 +129,129 @@ describe('Game Entity', () => {
       expect(() => Game.create(invalidProps)).toThrow('Game: Expansion must have a base game');
     });
   });
+
+  describe('update', () => {
+    it('should update a base game with valid props', () => {
+      const game = Game.create(validBaseGameProps);
+      const updatedProps = {
+        ...validBaseGameProps,
+        name: 'Updated Catan',
+        releaseYear: 2000,
+        publisher: 'New Publisher'
+      };
+      
+      game.update(updatedProps);
+      
+      expect(game.name).toBe('Updated Catan');
+      expect(game.releaseYear).toBe(2000);
+      expect(game.publisher).toBe('New Publisher');
+      expect(game.type).toBe(GameType.BaseGame);
+    });
+
+    it('should update an expansion game with valid props', () => {
+      const game = Game.create(validExpansionProps);
+      const updatedProps = {
+        ...validExpansionProps,
+        name: 'Updated Seafarers',
+        baseGame: 456
+      };
+      
+      game.update(updatedProps);
+      
+      expect(game.name).toBe('Updated Seafarers');
+      expect(game.baseGame).toBe(456);
+      expect(game.type).toBe(GameType.Expansion);
+    });
+
+    it('should change a game from base game to expansion', () => {
+      const game = Game.create(validBaseGameProps);
+      const updatedProps = {
+        ...validBaseGameProps,
+        type: GameType.Expansion,
+        baseGame: 789,
+        standalone: false
+      };
+      
+      game.update(updatedProps);
+      
+      expect(game.type).toBe(GameType.Expansion);
+      expect(game.baseGame).toBe(789);
+      expect(game.standalone).toBe(false);
+    });
+
+    it('should change a game from expansion to base game', () => {
+      const game = Game.create(validExpansionProps);
+      const updatedProps = {
+        ...validExpansionProps,
+        type: GameType.BaseGame,
+        baseGame: undefined
+      };
+      
+      game.update(updatedProps);
+      
+      expect(game.type).toBe(GameType.BaseGame);
+      expect(game.baseGame).toBeUndefined();
+    });
+
+    it('should throw error when updating with empty name', () => {
+      const game = Game.create(validBaseGameProps);
+      const invalidProps = { ...validBaseGameProps, name: '' };
+      
+      expect(() => game.update(invalidProps)).toThrow(EntityError);
+      expect(() => game.update(invalidProps)).toThrow('Game: Name is required');
+      expect(game.name).toBe(validBaseGameProps.name);
+    });
+
+    it('should throw error when updating with invalid players', () => {
+      const game = Game.create(validBaseGameProps);
+      const invalidProps = {
+        ...validBaseGameProps, 
+        players: { min: 3, max: 2 }
+      };
+      
+      expect(() => game.update(invalidProps)).toThrow(EntityError);
+      expect(() => game.update(invalidProps)).toThrow('Game: Maximum players must be greater than minimum players');
+      expect(game.players).toEqual(validBaseGameProps.players);
+    });
+
+    it('should throw error when updating expansion without base game', () => {
+      const game = Game.create(validExpansionProps);
+      const invalidProps = {
+        ...validExpansionProps,
+        baseGame: undefined
+      };
+      
+      expect(() => game.update(invalidProps)).toThrow(EntityError);
+      expect(() => game.update(invalidProps)).toThrow('Game: Expansion must have a base game');
+      expect(game.baseGame).toBe(validExpansionProps.baseGame);
+    });
+
+    it('should handle partial updates', () => {
+      const game = Game.create(validBaseGameProps);
+      
+      game.update({ name: 'Partially Updated Catan' });
+      expect(game.name).toBe('Partially Updated Catan');
+      expect(game.publisher).toBe(validBaseGameProps.publisher); 
+      
+      game.update({ releaseYear: 2001 });
+      expect(game.name).toBe('Partially Updated Catan');
+      expect(game.releaseYear).toBe(2001);
+      expect(game.publisher).toBe(validBaseGameProps.publisher);
+      
+      game.update({ players: { min: 2, max: 6 } });
+      expect(game.players.min).toBe(2);
+      expect(game.players.max).toBe(6);
+      expect(game.name).toBe('Partially Updated Catan');
+    });
+
+    it('should validate partial updates against the complete object', () => {
+      const game = Game.create(validExpansionProps);
+      
+      expect(() => game.update({ baseGame: undefined })).toThrow(EntityError);
+      expect(game.baseGame).toBe(validExpansionProps.baseGame);
+      
+      game.update({ baseGame: 999 });
+      expect(game.baseGame).toBe(999);
+    });
+  });
 });

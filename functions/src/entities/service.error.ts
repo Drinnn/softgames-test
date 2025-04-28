@@ -1,6 +1,6 @@
 export class ServiceError extends Error {
     constructor(message: string, originalError?: Error) {
-        super(`${message} - ${originalError?.message}`);
+        super(originalError ? `${message} - ${originalError.message}` : message);
         this.name = 'ServiceError';
     }
 }

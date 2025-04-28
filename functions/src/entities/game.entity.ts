@@ -33,6 +33,11 @@ export class Game {
         return new Game(props, id);
     }
 
+    update(props: Partial<GameProps>) {
+        GameValidator.validate({ ...this.props, ...props });
+        this.props = { ...this.props, ...props };
+    }
+
     get id() {
         return this._id;
     }
