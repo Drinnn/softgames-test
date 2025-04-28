@@ -1,0 +1,352 @@
+[
+    {
+        "id": "1",
+        "name": "Catan",
+        "releaseYear": 1995,
+        "players": {
+            "min": 3,
+            "max": 4
+        },
+        "publisher": "Kosmos",
+        "expansions": [
+            "2",
+            "3"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "2",
+        "name": "Catan: Seafarers",
+        "players": {
+            "min": 3,
+            "max": 4
+        },
+        "publisher": "Kosmos",
+        "baseGame": "1",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "3",
+        "name": "Catan: Cities & Knights",
+        "releaseYear": 1998,
+        "players": {
+            "min": 3,
+            "max": 4
+        },
+        "publisher": "Kosmos",
+        "baseGame": "1",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "4",
+        "name": "Ticket to Ride",
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "publisher": "Days of Wonder",
+        "expansions": [
+            "5"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "5",
+        "name": "Ticket to Ride: Europe",
+        "releaseYear": 2005,
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "publisher": "Days of Wonder",
+        "baseGame": "4",
+        "standalone": true,
+        "type": "Expansion"
+    },
+    {
+        "id": "6",
+        "name": "Pandemic",
+        "releaseYear": 2008,
+        "players": {
+            "min": 2,
+            "max": 4
+        },
+        "publisher": "Z-Man Games",
+        "expansions": [
+            "7"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "7",
+        "name": "Pandemic: On the Brink",
+        "releaseYear": 2009,
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "baseGame": "6",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "8",
+        "name": "Dominion",
+        "releaseYear": 2008,
+        "players": {
+            "min": 2,
+            "max": 4
+        },
+        "publisher": "Rio Grande Games",
+        "expansions": [
+            "9"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "9",
+        "name": "Dominion: Intrigue",
+        "players": {
+            "min": 2,
+            "max": 4
+        },
+        "publisher": "Rio Grande Games",
+        "baseGame": "8",
+        "standalone": true,
+        "type": "Expansion"
+    },
+    {
+        "id": "10",
+        "name": "7 Wonders",
+        "releaseYear": 2010,
+        "players": {
+            "min": 2,
+            "max": 7
+        },
+        "publisher": "Repos Production",
+        "expansions": [
+            "11"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "11",
+        "name": "7 Wonders: Leaders",
+        "releaseYear": 2011,
+        "players": {
+            "min": 2,
+            "max": 7
+        },
+        "publisher": "Repos Production",
+        "baseGame": "10",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "12",
+        "name": "Carcassonne",
+        "releaseYear": 2000,
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "publisher": "Hans im Glück",
+        "expansions": [
+            "13"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "13",
+        "name": "Carcassonne: Inns & Cathedrals",
+        "releaseYear": 2001,
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "publisher": "Hans im Glück",
+        "baseGame": "12",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "14",
+        "name": "Azul",
+        "releaseYear": 2017,
+        "players": {
+            "min": 2,
+            "max": 4
+        },
+        "publisher": "Next Move Games",
+        "type": "BaseGame"
+    },
+    {
+        "id": "15",
+        "name": "Azul: Stained Glass of Sintra",
+        "releaseYear": 2018,
+        "players": {
+            "min": 2,
+            "max": 4
+        },
+        "baseGame": "14",
+        "standalone": true,
+        "type": "Expansion"
+    },
+    {
+        "id": "16",
+        "name": "Cartographers: A Roll Player Tale",
+        "releaseYear": 2019,
+        "players": {
+            "min": 1
+        },
+        "publisher": "Thunderworks Games",
+        "type": "BaseGame"
+    },
+    {
+        "id": "17",
+        "name": "Wingspan",
+        "releaseYear": 2019,
+        "players": {
+            "min": 1,
+            "max": 5
+        },
+        "publisher": "Stonemaier Games",
+        "expansions": [
+            "18"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "18",
+        "name": "Wingspan: European Expansion",
+        "releaseYear": 2019,
+        "players": {
+            "min": 1,
+            "max": 5
+        },
+        "publisher": "Stonemaier Games",
+        "baseGame": "17",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "19",
+        "name": "Gloomhaven",
+        "releaseYear": 2017,
+        "players": {
+            "min": 1,
+            "max": 4
+        },
+        "publisher": "Cephalofair Games",
+        "type": "BaseGame"
+    },
+    {
+        "id": "20",
+        "name": "Spirit Island",
+        "releaseYear": 2017,
+        "players": {
+            "min": 1,
+            "max": 4
+        },
+        "publisher": "Greater Than Games",
+        "expansions": [
+            "21"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "21",
+        "name": "Spirit Island: Branch & Claw",
+        "releaseYear": 2017,
+        "players": {
+            "min": 1,
+            "max": 4
+        },
+        "publisher": "Greater Than Games",
+        "baseGame": "20",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "22",
+        "name": "The Crew: The Quest for Planet Nine",
+        "releaseYear": 2019,
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "publisher": "Kosmos",
+        "expansions": [
+            "23"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "23",
+        "name": "The Crew: Mission Deep Sea",
+        "releaseYear": 2021,
+        "players": {
+            "min": 2,
+            "max": 5
+        },
+        "publisher": "Kosmos",
+        "baseGame": "22",
+        "standalone": true,
+        "type": "Expansion"
+    },
+    {
+        "id": "24",
+        "name": "Root",
+        "releaseYear": 2018,
+        "players": {
+            "min": 2,
+            "max": 4
+        },
+        "publisher": "Leder Games",
+        "expansions": [
+            "25"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "25",
+        "name": "Root: The Riverfolk Expansion",
+        "releaseYear": 2018,
+        "players": {
+            "min": 2,
+            "max": 6
+        },
+        "publisher": "Leder Games",
+        "baseGame": "24",
+        "standalone": false,
+        "type": "Expansion"
+    },
+    {
+        "id": "26",
+        "name": "Scythe",
+        "releaseYear": 2016,
+        "players": {
+            "min": 1,
+            "max": 7
+        },
+        "publisher": "Stonemaier Games",
+        "expansions": [
+            "27"
+        ],
+        "type": "BaseGame"
+    },
+    {
+        "id": "27",
+        "name": "Scythe: The Wind Gambit",
+        "releaseYear": 2017,
+        "players": {
+            "min": 1,
+            "max": 7
+        },
+        "baseGame": "26",
+        "standalone": false,
+        "type": "Expansion"
+    }
+]

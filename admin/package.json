@@ -1,0 +1,33 @@
+{
+  "name": "@softgames/senior-backend-dev-assessment-admin",
+  "version": "0.0.1",
+  "description": "Admin of senior-backend-dev-assessment",
+  "author": "Softgames",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "echo 'Just nope'",
+    "dev": "vite --force",
+    "test": "vitest run --coverage",
+    "build": "tsc && vite build",
+    "lint": "echo 'To be implemented'",
+    "preview": "vite preview",
+    "hardUpdate": "npx -y rimraf node_modules/ package-lock.json ; npm i"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.6.1",
+    "antd": "^5.24.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-istanbul": "^3.0.7",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7"
+  }
+}
