@@ -12,7 +12,8 @@
     "seed": "npm run build && FIRESTORE_EMULATOR_HOST=localhost:5003 node lib/scripts/seedDatabase.js",
     "seed:prod": "npm run build && node lib/scripts/seedDatabase.js",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "main": "lib/index.js",
   "dependencies": {
