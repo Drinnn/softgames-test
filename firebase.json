@@ -24,7 +24,7 @@
     "public": "./admin/dist",
     "rewrites": [
       {
-        "source": "/api",
+        "source": "/api/**",
         "function": {
           "functionId": "api",
           "region": "europe-west3",
@@ -43,17 +43,25 @@
     ]
   },
   "emulators": {
+    "auth": {
+      "host": "0.0.0.0",
+      "port": 9099
+    },
     "functions": {
-      "port": 5002
+      "host": "0.0.0.0",
+      "port": 5004
     },
     "firestore": {
+      "host": "0.0.0.0",
       "port": 5003
     },
     "hosting": {
+      "host": "0.0.0.0",
       "port": 5001
     },
     "ui": {
       "enabled": true,
+      "host": "0.0.0.0",
       "port": 5000
     },
     "singleProjectMode": true

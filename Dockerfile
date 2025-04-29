@@ -2,22 +2,21 @@ FROM node:20-slim
 
 WORKDIR /app
 
-RUN npm install -g firebase-tools
+RUN apt-get update && apt-get install -y \
+    openjdk-17-jdk-headless \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY package.json ./
-COPY functions/package.json ./functions/
-COPY admin/package.json ./admin/
+RUN npm install -g firebase-tools
 
 COPY . .
 
 RUN npm install -C functions
 RUN npm install -C admin
-
 RUN cd functions && npm run build
 RUN cd admin && npm run build
 
-RUN npm run seed
+RUN chmod +x entrypoint.sh
 
-EXPOSE 5000 5001 5002 5003 5004
+EXPOSE 5000 5001 5002 5003 5004 9099
 
-CMD ["firebase", "emulators:start", "--import=./data"] 
+ENTRYPOINT ["/app/entrypoint.sh"] 
