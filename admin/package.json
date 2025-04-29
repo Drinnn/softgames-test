@@ -5,26 +5,30 @@
   "author": "Softgames",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "echo 'Just nope'",
+    "start": "vite",
     "dev": "vite --force",
     "test": "vitest run --coverage",
     "build": "tsc && vite build",
-    "lint": "echo 'To be implemented'",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "hardUpdate": "npx -y rimraf node_modules/ package-lock.json ; npm i"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",
     "antd": "^5.24.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.2.0"
+    "axios": "^1.9.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-istanbul": "^3.0.7",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.2",
     "vite": "^6.2.0",

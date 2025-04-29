@@ -25,7 +25,7 @@ export class Game {
 
     private constructor(props: GameProps, id?: number) {
         this.props = props;
-        this._id = id ?? Math.random();
+        this._id = id ?? Math.floor(Date.now() + Math.random() * 10000);
     }
 
     static create(props: GameProps, id?: number) {
