@@ -1,0 +1,14 @@
+node_modules
+**/node_modules
+.git
+.github
+.vscode
+*.log
+firebase-debug.log
+firestore-debug.log
+**/dist
+**/build
+**/lib
+**/.firebase
+.firebase
+.firebaserc 
