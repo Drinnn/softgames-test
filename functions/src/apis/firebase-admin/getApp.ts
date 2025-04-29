@@ -1,5 +1,5 @@
 import type { App } from 'firebase-admin/app';
-import { initializeApp, getApps, getApp as getFirebaseApp } from 'firebase-admin/app';
+import { initializeApp, getApps, getApp as getFirebaseApp, applicationDefault } from 'firebase-admin/app';
 import { memoize } from '../../utils/memoize';
 
 export const getApp = memoize((): App => {
@@ -11,6 +11,7 @@ export const getApp = memoize((): App => {
   const projectId = 'demo-project';
   
   return initializeApp({
-    projectId
+    projectId,
+    credential: applicationDefault()
   });
 });

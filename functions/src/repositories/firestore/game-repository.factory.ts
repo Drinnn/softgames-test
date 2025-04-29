@@ -1,4 +1,4 @@
-import { getFirestore } from 'firebase-admin/firestore';
+import { getFirestore } from '../../apis/firestore/getFirestore';
 import { FirestoreGameRepository } from './game.repository';
 
 let gameRepository: FirestoreGameRepository | null = null;

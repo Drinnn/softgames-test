@@ -1,5 +1,8 @@
 import { https } from 'firebase-functions/v2';
 import { app } from './app';
+import { getApp } from './apis/firebase-admin/getApp';
+
+getApp();
 
 export const api = https.onRequest(
   {
