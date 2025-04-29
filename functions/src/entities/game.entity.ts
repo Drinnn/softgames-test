@@ -10,7 +10,7 @@ export interface GameProps {
     releaseYear: number;
     players: {
         min: number;
-        max: number;
+        max?: number;
     };
     publisher: string;
     expansions: number[];

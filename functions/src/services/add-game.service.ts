@@ -6,7 +6,7 @@ export type AddGameServiceInput = {
     releaseYear: number;
     players: {
         min: number;
-        max: number;
+        max?: number;
     };
     publisher: string;
     expansions: number[];

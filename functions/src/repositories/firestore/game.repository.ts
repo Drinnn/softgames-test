@@ -83,7 +83,7 @@ interface FirestoreGameData {
   releaseYear: number;
   players: {
     min: number;
-    max: number;
+    max?: number;
   };
   publisher: string;
   expansions: number[];

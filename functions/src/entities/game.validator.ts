@@ -11,7 +11,7 @@ export class GameValidator {
             throw new EntityError('Game', 'Minimum players must be greater than 0');
         }
 
-        if(props.players.max < props.players.min) {
+        if(props.players.max && props.players.max < props.players.min) {
             throw new EntityError('Game', 'Maximum players must be greater than minimum players');
         }
 

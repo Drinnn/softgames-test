@@ -65,6 +65,22 @@ describe('Game Entity', () => {
       expect(game.id).toBe(customId);
     });
 
+    it('should create a game with only min players specified', () => {
+      const minOnlyProps = {
+        ...validBaseGameProps,
+        players: {
+          min: 1
+        }
+      };
+      
+      const game = Game.create(minOnlyProps);
+      
+      expect(game.players.min).toBe(1);
+      expect(game.players.max).toBeUndefined();
+      expect(game.name).toBe(validBaseGameProps.name);
+      expect(game.publisher).toBe(validBaseGameProps.publisher);
+    });
+
     it('should throw error for empty name', () => {
       const invalidProps = { ...validBaseGameProps, name: '' };
       
